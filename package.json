@@ -16,6 +16,7 @@
     "dev": "vite",
     "build": "tsup src/index.ts --format cjs,esm --dts",
     "build:styles": "postcss ./src/index.css -o ./dist/style.css",
+    "release": "pnpm run build && changeset publish",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
