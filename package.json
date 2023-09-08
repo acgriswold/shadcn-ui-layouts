@@ -5,7 +5,7 @@
   "private": false,
   "version": "0.0.1",
   "type": "module",
-  "main": "dist/index.cjs.js",
+  "main": "dist/index.js",
   "module": "dist/index.es.js",
   "types": "dist/index.d.ts",
   "sideEffects": false,
@@ -14,7 +14,7 @@
   ],
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build && pnpm run build:styles",
+    "build": "tsup src/index.ts --format cjs,esm --dts",
     "build:styles": "postcss ./src/index.css -o ./dist/style.css",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
