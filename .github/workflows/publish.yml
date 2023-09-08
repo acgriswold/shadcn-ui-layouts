@@ -16,6 +16,8 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       actions: write
+      content: write
+
     steps:
       - uses: actions/checkout@v3
       - uses: pnpm/action-setup@v2
