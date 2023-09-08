@@ -8,26 +8,23 @@ const { peerDependencies, dependencies } = require('./package.json')
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
-    react({'jsxRuntime': 'classic'}),
-    dts({ include: ['src/**/*'] })
+    react({
+      'jsxRuntime': 'classic'
+    }),
+    dts({
+      include: ['src/**/*'],
+    })
   ],
-  resolve: {
-    alias: {
-      "@": path.resolve(__dirname, "./src"),
-    }
-  },
   build: {
     lib: {
       entry: path.resolve(__dirname, 'src', 'index.ts'),
-      formats: ["es", 'cjs'],
+      formats: ['es', 'cjs'],
       fileName: (ext) => `index.${ext}.js`,
     },
-    /* Do not include dependencies and peerDependencies in final build */
     rollupOptions: {
-      external: [...Object.keys(peerDependencies), ...Object.keys(dependencies)],
-      output: { preserveModules: true, exports: 'named'}
+      external: [...Object.keys(peerDependencies), ...Object.keys(dependencies)], output: { preserveModules: true, exports: 'named' }
     },
-
+    
     target: 'esnext',
     sourcemap: true
   }
