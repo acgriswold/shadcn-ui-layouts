@@ -1,5 +1,3 @@
-import "./index.css"
-
 export { Avatar, AvatarImage, AvatarFallback } from "./components/ui/avatar"
 
 export { Alert, AlertTitle, AlertDescription } from "./components/ui/alert"
