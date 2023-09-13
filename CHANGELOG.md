@@ -1,5 +1,11 @@
 # shadcn-ui-layouts
 
+## 0.0.6
+
+### Patch Changes
+
+- 9ba8907: Now with working Dark Mode!
+
 ## 0.0.5
 
 ### Patch Changes
