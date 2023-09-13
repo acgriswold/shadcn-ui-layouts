@@ -3,7 +3,7 @@
   "description": "A component libary for React with Tailwind CSS, Vite, TypeScript all built on top of shadcn/ui components.",
   "license": "MIT",
   "private": false,
-  "version": "0.0.4",
+  "version": "0.0.5",
   "type": "module",
   "types": "dist/index.d.ts",
   "style": "dist/style.css",

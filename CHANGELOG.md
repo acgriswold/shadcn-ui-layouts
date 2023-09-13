@@ -1,5 +1,11 @@
 # shadcn-ui-layouts
 
+## 0.0.5
+
+### Patch Changes
+
+- e4ad33b: Fix style.css export naming
+
 ## 0.0.4
 
 ### Patch Changes
