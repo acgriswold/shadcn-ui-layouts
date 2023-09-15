@@ -65,3 +65,8 @@ export {
 export { Toaster } from "./components/ui/toaster"
 
 export { useToast, toast } from "./components/ui/use-toast"
+
+
+
+
+export { type Icon, Icons } from "./components/global/icons"
