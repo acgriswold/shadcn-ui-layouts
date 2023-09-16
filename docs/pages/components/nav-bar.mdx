@@ -7,28 +7,84 @@ import "shadcn-ui-layouts/dist/style.css";
 
 import { config } from "../../config/docs-config";
 
+import * as React from "react";
+
 ## NavBar Item
 
-<Tabs items={["default/subtle", "disabled/muted", "asChild/subtle"]}>
+<Tabs items={["variant", "opacity", "disabled", "asChild"]}>
   <Tabs.Tab>
-    <NavBarItem variant="default" opacity="subtle" href={config.project.github}>
-      Default - Subtle
+    <NavBarItem variant="default" href={config.project.github}>
+      Default
     </NavBarItem>
+
+    ```tsx copy /variant/
+       <NavBarItem variant="default" href={config.project.github}>
+            Default
+        </NavBarItem>
+    ```
+
+    <NavBarItem variant="subtle" href={config.project.github}>
+      Subtle
+    </NavBarItem>
+
+    ```tsx copy /variant/
+       <NavBarItem variant="subtle" href={config.project.github}>
+            Subtle
+        </NavBarItem>
+    ```
   </Tabs.Tab>
   <Tabs.Tab>
-    <NavBarItem
-      variant="subtle"
-      opacity="muted"
-      disabled
-      href={config.project.github}
-    >
-      Disabled - Muted
+    <NavBarItem opacity="default" href={config.project.github}>
+      Default
     </NavBarItem>
+
+    ```tsx copy /opacity/
+       <NavBarItem opacity="default" href={config.project.github}>
+            Default
+        </NavBarItem>
+    ```
+
+    <NavBarItem opacity="subtle" href={config.project.github}>
+      Subtle
+    </NavBarItem>
+
+    ```tsx copy /opacity/
+       <NavBarItem opacity="subtle" href={config.project.github}>
+            Subtle
+        </NavBarItem>
+    ```
+
+    <NavBarItem opacity="muted" href={config.project.github}>
+      Muted
+    </NavBarItem>
+
+    ```tsx copy /opacity/
+       <NavBarItem opacity="muted" href={config.project.github}>
+            Muted
+        </NavBarItem>
+    ```
+  </Tabs.Tab>
+  <Tabs.Tab>
+    <NavBarItem disabled href={config.project.github}>
+      Disabled
+    </NavBarItem>
+
+    ```tsx copy /disabled/
+       <NavBarItem disabled href={config.project.github}>
+            Disabled
+        </NavBarItem>
+    ```
   </Tabs.Tab>
   <Tabs.Tab>
     <NavBarItem variant="default" opacity="subtle" asChild>
-      <a href={config.project.github}>As child</a>
+      [as Child]({config.project.github})
     </NavBarItem>
+    
+    ```tsx copy /asChild/
+        <NavBarItem variant="default" opacity="subtle" asChild>
+            [as Child]({config.project.github})
+        </NavBarItem>
+    ```
   </Tabs.Tab>
 </Tabs>
 
