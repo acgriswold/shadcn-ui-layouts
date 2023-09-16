@@ -1,0 +1,39 @@
+# Navigation
+
+import { Callout, Tabs } from "nextra/components";
+
+import { MobileNav, NavBarItem, Icons } from "shadcn-ui-layouts";
+import "shadcn-ui-layouts/dist/style.css";
+
+import { config } from "../../config/docs-config";
+
+## NavBar Item
+
+<Tabs items={["default/subtle", "disabled/muted", "asChild/subtle"]}>
+  <Tabs.Tab>
+    <NavBarItem variant="default" opacity="subtle" href={config.project.github}>
+      Default - Subtle
+    </NavBarItem>
+  </Tabs.Tab>
+  <Tabs.Tab>
+    <NavBarItem
+      variant="subtle"
+      opacity="muted"
+      disabled
+      href={config.project.github}
+    >
+      Disabled - Muted
+    </NavBarItem>
+  </Tabs.Tab>
+  <Tabs.Tab>
+    <NavBarItem variant="default" opacity="subtle" asChild>
+      <a href={config.project.github}>As child</a>
+    </NavBarItem>
+  </Tabs.Tab>
+</Tabs>
+
+## NavBar
+
+<Callout type="info" emoji={<Icons.help />}>
+  Please get hooks to work.
+</Callout>

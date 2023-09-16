@@ -76,3 +76,7 @@ export { type Icon, Icons } from "./components/global/icons"
 
 
 export { type FooterProps, SimpleFooter } from "./components/layouts/footer"
+
+export { NavBarItem, type NavBarItemProps } from "./components/layouts/nav-bar-item"
+export { MobileNav, type MobileNavProps } from "./components/layouts/nav-bar-mobile"
+export { NavBar, type NavBarProps } from "./components/layouts/nav-bar"
